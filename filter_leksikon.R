@@ -11,7 +11,7 @@ library(quanteda)
 # Data --------------------------------------------------------------------
 
 ## Publikasjoner fra arkiver
-arkiv_data <- readRDS("arkiv_poster_til_filtrering.rds")
+arkiv_data2 <- read_csv("arkivposter.csv")
 
 ## Publikasjoner registrert i Cristin
 cristin_data <- read_csv("nvi_2011_2021.csv")
