@@ -13,12 +13,8 @@ library(quanteda)
 ## Publikasjoner fra arkiver
 arkiv_data <- readRDS("arkiv_poster_til_filtrering.rds")
 
-## Publikasjoner registrert i Cristin, som ikke er arkivert
-cristin_data <- read_csv("nvi_2011_2021.csv") |> 
-  filter(!VARBEIDLOPENR %in% arkiv_data$cristin_id) |> 
-  select(id = VARBEIDLOPENR,
-         title = TITTELTEKST_ORIGINAL) |> 
-  mutate(id = as.character(id))
+## Publikasjoner registrert i Cristin
+cristin_data <- read_csv("nvi_2011_2021.csv")
 
 ## Leksikon
 leksikon <- dictionary(file = "leksikon.yml")
